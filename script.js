@@ -30,6 +30,7 @@ function createRepositoryItem(repository) {
   language.textContent = repository.language;
 
   const stars = document.createElement("span");
+  stars.setAttribute("aria-label", `${repository.stars.toLocaleString()} stars`);
   stars.textContent = `${repository.stars.toLocaleString()} stars`;
 
   const starredAt = document.createElement("time");
